@@ -1,0 +1,62 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+    --font-size: 15px;
+    --font-family-headings: "Josefin Sans", sans-serif;
+    --font-family-text: "Alata", sans-serif;
+}
+
+
+/* General */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--font-family-text);
+    font-weight: 400;
+    text-align: center;
+    color: var(--very-dark-gray);
+}
+
+img {
+    max-width: 100%;
+}
+
+a,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Reusable */
+
+.container {
+    width: clamp(16rem, 90vw, 70rem);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*  */
+
+.attribution {
+    font-size: 0.6875rem;
+}
+
+.attribution__link {
+    color: hsl(228, 45%, 44%);
+}
