@@ -35,6 +35,10 @@ a:visited {
     text-decoration: none;
 }
 
+p {
+    max-width: 60ch;
+}
+
 
 /* Reusable */
 
@@ -65,7 +69,28 @@ a:visited {
 }
 
 
-/*  */
+/* Typo */
+
+.title {
+    font-family: var(--font-family-headings);
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--black);
+}
+
+.hero__title {
+    font-size: clamp(2.2rem, 1.4rem + 1.3061vw, 4rem);
+}
+
+.virtual-reality__title,
+.creations__title {
+    font-size: clamp(1.8rem, 2.1892rem + -0.4324vw, 2rem);
+}
+
+.creations-title {
+    font-size: 1.4375rem;
+    margin: 0;
+}
 
 .attribution {
     font-size: 0.6875rem;
