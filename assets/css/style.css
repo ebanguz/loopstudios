@@ -50,6 +50,20 @@ a:visited {
     justify-content: center;
 }
 
+.is_visually_hidden {
+    block-size: 1px;
+    inline-size: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+}
+
 
 /*  */
 
