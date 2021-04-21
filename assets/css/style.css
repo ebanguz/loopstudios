@@ -17,12 +17,19 @@
     box-sizing: border-box;
 }
 
+body,
+html {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    /* temporary solution */
+}
+
 body {
     font-size: var(--font-size);
     font-family: var(--font-family-text);
     font-weight: 400;
-    text-align: center;
-    color: var(--very-dark-gray);
+    color: var(--dark-gray);
 }
 
 img {
@@ -45,8 +52,8 @@ p {
 .container {
     width: clamp(16rem, 90vw, 70rem);
     margin: 0 auto;
-    padding: 0 1.5rem;
-    border: 1px solid lightcoral;
+    padding: 0 1.4rem;
+    /*! border: 1px solid lightcoral; */
 }
 
 .container-header {
@@ -76,14 +83,14 @@ p {
 
 .title {
     font-family: var(--font-family-headings);
-    text-transform: uppercase;
-    font-weight: 300;
     color: var(--black);
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
 }
 
 .hero__title {
     font-size: clamp(2.124rem, 1.3737rem + 3.517vw, 4.75rem);
-    line-height: 1;
     color: var(--white);
     text-align: initial;
     margin: 0.3em auto 0.3em 0.2em;
@@ -162,12 +169,12 @@ p {
 /* Button */
 
 .nav__hamburguer {
-    z-index: 3;
-    background: transparent;
+    display: flex;
     border: none;
     cursor: pointer;
-    display: flex;
+    background: transparent;
     padding: 0;
+    z-index: 3;
 }
 
 .line {
@@ -215,20 +222,39 @@ p {
 
 .hero {
     background: url("../images/mobile/image-hero.jpg") center center/cover no-repeat;
-    min-height: 80vh;
     z-index: -1;
     position: relative;
 }
 
 .hero__content {
-    min-height: 80vh;
     display: flex;
     align-items: center;
+    min-height: 74vh;
+    /* Make height clamp */
 }
 
 .hero__banner {
     max-width: 35.1875rem;
     border: 2px solid var(--white);
+}
+
+
+/* Virtual Reality Section */
+
+.virtual-reality__content {
+    margin: 6em auto;
+}
+
+.virtual-reality__text {
+    text-align: center;
+}
+
+
+/* Creations Section */
+
+.creations__grid {
+    display: grid;
+    gap: 1em;
 }
 
 
