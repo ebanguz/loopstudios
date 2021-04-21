@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", e => {
         $hamburger_button.classList.toggle("opened");
         $hamburger_button.setAttribute(
             "aria-expanded",
-            this.classList.contains("opened")
+            $hamburger_button.classList.contains("opened")
         );
     });
 });

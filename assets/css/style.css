@@ -49,15 +49,8 @@ p {
     border: 1px solid lightcoral;
 }
 
-.header__container {
+.container-header {
     width: 100vw;
-    /* max-width: 1440px; */
-}
-
-.row {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .is_visually_hidden {
@@ -89,7 +82,11 @@ p {
 }
 
 .hero__title {
-    font-size: clamp(2.2rem, 1.4rem + 1.3061vw, 4rem);
+    font-size: clamp(2.124rem, 1.3737rem + 3.517vw, 4.75rem);
+    line-height: 1;
+    color: var(--white);
+    text-align: initial;
+    margin: 0.3em auto 0.3em 0.2em;
 }
 
 .virtual-reality__title,
@@ -106,8 +103,9 @@ p {
 /* Header */
 
 .header {
-    /* padding: 1em; */
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav {
@@ -134,18 +132,18 @@ p {
     top: 0;
     right: 0;
     width: 100%;
-    min-height: 100vh;
-    list-style: none;
-    background-color: var(--black);
-    color: var(--white);
-    text-transform: uppercase;
     z-index: 2;
+    min-height: 100vh;
+    background-color: var(--black);
+    font-family: var(--font-family-headings);
+    font-size: 2rem;
+    color: var(--white);
+    list-style: none;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 0;
     transform: translateX(100%);
     transition: transform 0.5s;
-    font-size: 2rem;
-    margin-top: 0;
-    text-align: left;
-    font-family: var(--font-family-headings);
 }
 
 .open .nav__list {
@@ -213,32 +211,44 @@ p {
 }
 
 
+/* Hero */
+
+.hero {
+    background: url("../images/mobile/image-hero.jpg") center center/cover no-repeat;
+    min-height: 80vh;
+    z-index: -1;
+    position: relative;
+}
+
+.hero__content {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero__banner {
+    max-width: 35.1875rem;
+    border: 2px solid var(--white);
+}
+
+
 /*  */
 
-.attribution {
-    font-size: 0.6875rem;
-}
-
-.attribution__link {
-    color: hsl(228, 45%, 44%);
-}
-
-@media (min-width: 768px) {
-    .header {
-        transform: translateX(-50%);
-        left: 50%;
+@media (min-width: 40em) {
+    .hero {
+        background: url("../images/desktop/image-hero.jpg") center/cover no-repeat #0000004f;
+        background-blend-mode: darken;
     }
-    .header__container {
+}
+
+@media (min-width: 48em) {
+    .container-header {
         width: clamp(16rem, 90vw, 70rem);
-        margin: 0 auto;
-        padding: 0 1.5rem;
-        position: relative;
     }
     .nav__list {
         position: initial;
         width: initial;
         min-height: initial;
-        justify-content: initial;
         transform: initial;
         transition: initial;
         background: initial;
@@ -247,11 +257,10 @@ p {
         z-index: 1;
         margin-bottom: 0;
         text-transform: capitalize;
-        font-size: 2rem;
         font-family: var(--font-family-text);
     }
     .nav__link {
-        margin-left: 1.5em;
+        margin-left: 1.6em;
         font-size: 1rem;
         transition: all 0.1s;
     }
@@ -259,3 +268,6 @@ p {
         display: none;
     }
 }
+
+
+/* landscape */
