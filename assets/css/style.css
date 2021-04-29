@@ -23,6 +23,7 @@ html {
     width: 100%;
     position: relative;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     /* temporary solution */
 }
 
@@ -44,6 +45,10 @@ a:visited {
 p {
     max-width: 60ch;
     margin: 1rem auto;
+}
+
+button>* {
+    pointer-events: none;
 }
 
 
@@ -193,19 +198,19 @@ p {
     stroke-width: 6;
 }
 
-.opened .line1 {
+.open .line1 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
 }
 
-.opened .line2 {
+.open .line2 {
     stroke-dasharray: 1 60;
     stroke-dashoffset: -30;
     stroke-width: 6;
 }
 
-.opened .line3 {
+.open .line3 {
     stroke-dasharray: 90 207;
     stroke-dashoffset: -134;
     stroke-width: 6;
@@ -309,7 +314,8 @@ p {
     transition: all 0.5s ease-in-out;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
     color: var(--white);
     background: var(--black);
 }
