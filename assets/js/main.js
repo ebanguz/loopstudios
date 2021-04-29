@@ -1,15 +1,23 @@
+//
 document.addEventListener("DOMContentLoaded", e => {
+    const $html = document.documentElement;
+    const $body = document.body;
     const $nav = document.querySelector(".nav");
-    const $hamburger_button = document.querySelector(".nav__hamburguer");
+    const $menuBtn = document.querySelector(".nav__hamburguer");
 
-    $hamburger_button.addEventListener("click", e => {
-        $nav.classList.toggle("open");
-        document.body.classList.toggle("no-scroll");
-        $hamburger_button.classList.toggle("opened");
-        $hamburger_button.setAttribute(
-            "aria-expanded",
-            $hamburger_button.classList.contains("opened")
-        );
+    document.addEventListener("click", e => {
+        if (
+            e.target.matches(".nav__hamburguer") ||
+            e.target.matches(".nav__link")
+        ) {
+            [$body, $html].forEach(el => el.classList.toggle("no-scroll"));
+            [$nav, $menuBtn].forEach(el => el.classList.toggle("open"));
+
+            $menuBtn.setAttribute(
+                "aria-expanded",
+                $menuBtn.classList.contains("open")
+            );
+        }
     });
 });
 
