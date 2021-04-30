@@ -4,6 +4,7 @@
     --dark-gray: hsl(0, 0%, 55%);
     --very-dark-gray: hsl(0, 0%, 41%);
     --attribution-color: hsl(180, 37%, 63%);
+    --hover-link: hsla(0, 0%, 100%, 0.588);
     --font-size: 15px;
     --font-family-headings: "Josefin Sans", sans-serif;
     --font-family-text: "Alata", sans-serif;
@@ -331,7 +332,7 @@ button>* {
 }
 
 .footer__logo,
-.footer__social_media {
+.footer__social-link {
     fill: var(--white);
 }
 
@@ -347,13 +348,20 @@ button>* {
     justify-items: center;
 }
 
-.footer__social_media {
+.footer__social-links {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer__social_media+.footer__social_media {
+.footer__social-link:hover,
+.nav__link:hover,
+.footer__link:hover {
+    fill: var(--hover-link);
+    color: var(--hover-link);
+}
+
+.footer__social-link+.footer__social-link {
     margin-left: 1rem;
 }
 
@@ -384,10 +392,10 @@ a.attribution__link {
     .footer__links {
         display: block;
     }
-    .footer__link+.footer__link {
-        margin-left: 8%;
+    .footer__link:not(:last-child) {
+        margin-right: 8%;
     }
-    .footer__social_media {
+    .footer__social-links {
         justify-content: flex-end;
         grid-area: 1/2/1/3;
     }
